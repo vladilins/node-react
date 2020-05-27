@@ -3,8 +3,10 @@ const app = express();
 const port = 4001;
 const bodyParser = require("body-parser");
 const { randomBytes } = require("crypto");
+const cors = require("cors");
 
 app.use(bodyParser.json());
+app.use(cors());
 
 const commentsByPostsId = {};
 
